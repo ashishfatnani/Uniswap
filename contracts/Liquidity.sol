@@ -2,11 +2,11 @@
 pragma solidity ^0.8.0;
 
 import "./ERC20Token.sol";
+// import "./DemandCurve.sol";
 
 contract LiquidityPool {
     ERC20Token public tokenA;
     ERC20Token public tokenB;
-
     mapping(address => uint256) public liquidity;
 
     event LiquidityAdded(
@@ -23,6 +23,7 @@ contract LiquidityPool {
     constructor(address _tokenAAddress, address _tokenBAddress) {
         tokenA = ERC20Token(_tokenAAddress);
         tokenB = ERC20Token(_tokenBAddress);
+        // demandCurve = DemandCurve(_demandCurveAddress);
     }
 
     function provideLiquidity(uint256 _amountA, uint256 _amountB) external {
@@ -55,4 +56,11 @@ contract LiquidityPool {
 
         emit LiquidityRemoved(msg.sender, _amountA, _amountB);
     }
+
+    // function calculateSwapAmount(
+    //     uint256 _amountIn
+    // ) internal view returns (uint256) {
+    //     uint256 tokenAmountOut = demandCurve.calculatePrice(_amountIn);
+    //     return tokenAmountOut;
+    // }
 }
