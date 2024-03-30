@@ -41,8 +41,8 @@ describe("LiquidityPool", function () {
 
   it("Should provide liquidity correctly", async function () {
     const [provider] = await ethers.getSigners();
-    const amountA = ethers.utils.parseEther("1000");
-    const amountB = ethers.utils.parseEther("1000");
+    const amountA = ethers.parseEther("1000");
+    const amountB = ethers.parseEther("1000");
 
     await tokenAInstance
       .connect(provider)
@@ -64,8 +64,8 @@ describe("LiquidityPool", function () {
 
   it("Should remove liquidity correctly", async function () {
     const [provider] = await ethers.getSigners();
-    const amountA = ethers.utils.parseEther("1000");
-    const amountB = ethers.utils.parseEther("1000");
+    const amountA = ethers.parseEther("1000");
+    const amountB = ethers.parseEther("1000");
 
     await tokenAInstance
       .connect(provider)

@@ -65,3 +65,9 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 For inquiries or support, please contact [ashishfatnani3@gmail.com](mailto:ashishfatnani3@gmail.com).
+
+## Note
+
+- As of now the custom ration isn't considerd for the time constarints.
+- Will add frontend in the next sprint.
+- Will add Liquidity tokens, which will be provided to the user once they add their funds in the liquidity.
